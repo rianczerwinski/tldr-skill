@@ -1,7 +1,7 @@
 interface:
-  display_name: "I Have ADHD"
-  short_description: "Action-first output for ADHD readers"
-  default_prompt: "Use $i-have-adhd to make this response action-first and easy to execute."
+  display_name: "Response Shaping · I Have ADHD"
+  short_description: "Concise answers, readable structure, deliberate pacing"
+  default_prompt: "Use $i-have-adhd to rewrite the previous answer concisely and clearly, and keep that presentation preference active."
 
 policy:
-  allow_implicit_invocation: false
+  allow_implicit_invocation: true

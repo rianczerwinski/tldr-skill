@@ -1,139 +1,59 @@
 ---
 name: i-have-adhd
-description: 'Shape output for a reader with ADHD: lead with the next action, number multi-step work, restate state across turns, suppress tangents, give specific time estimates, make wins visible. Invoke with /i-have-adhd; stays on until "stop adhd mode".'
+description: 'Shape responses for the requested reading effort: summarize for "tldr", "tl;dr", "short version", "just the essentials", or "be concise"; reorganize for "wall of text" or "make this easier to scan"; pace work for "one step at a time". Applies to requested answer or artifact presentation, including readability corrections. Standalone "adhd", "i have adhd", or explicit invocation without a narrower request rewrites the preceding answer and activates continuing concise, navigable presentation. Keeps compression, organization, and pacing independent; composes with domain-attunement for "plain English" explanations. Questions about these phrases or this skill do not activate its modes.'
 license: MIT
 metadata:
-  tags: "ADHD, Output Style, Productivity, Formatting"
-  category: "productivity"
+  tags: "Response Shaping, ADHD, Summarization, Readability"
+  category: "communication"
 ---
 
-# i-have-adhd
+# Response shaping
 
-The reader has ADHD. Output is not just brief. It is shaped so an ADHD brain can act on it.
+Make the answer easy to find, understand, and use at the depth the user requests. Keep `i-have-adhd` as the callable handle and preserve its familiar ADHD invocation. Judge success by the reading and reconstruction work removed, not by word count alone.
 
-## Persistence
+## Interpret the request
 
-These rules apply to every response for the rest of the session, not only this one. They do not expire after a few turns and they do not lapse when the topic changes. If you are unsure whether they still apply, they do.
+Select and combine only the operations requested or supported by the conversation. A presentation correction changes presentation; preserve the underlying question, task, and authority. Mentioning or asking about a trigger is not invoking it: answer that question normally.
 
-Turn them off only when the reader says "stop adhd mode" or "normal mode". Confirm in one line, then return to your default style.
+| Signal | Operation | Scope |
+|---|---|---|
+| `tldr`, `tl;dr`, `short version`, `just the essentials`, `be concise` | Summarize or compose a concise answer | Current answer or named material |
+| `wall of text`, `make this easier to scan`, readability correction | Reorganize information while preserving requested substance | Current answer or named artifact |
+| `one step at a time` | Pace the user-facing instructions or choices | Requested sequence |
+| Standalone `adhd` / `i have adhd`, or explicit skill invocation without a narrower request | Concise, navigable presentation with action support when relevant | Rewrite the preceding answer, then retain for the session |
+| `keep replies short`, `from now on`, `always in this conversation` | Retain the named preference | User-specified duration; otherwise this session |
+| `plain English`, `what does that mean?` | Ground unfamiliar concepts through `domain-attunement` | Current explanation; this alone requests no length change |
 
-## What ADHD changes about reading
+Recognize standalone ADHD triggers case-insensitively with surrounding punctuation ignored. With a substantive request, apply the requested shaping to that request. With no preceding answer, apply it to the next substantive answer. A narrower invocation such as “use $i-have-adhd to shorten this paragraph only” stays local.
 
-Five facts drive every rule below:
+On a reply correction, immediately deliver the corrected answer without an activation announcement. A local `tldr` does not create a persistent mode or erase an existing preference. Retain continuing preferences across topic changes until revised or revoked; `stop adhd mode`, `normal mode`, and equivalent ordinary language end the ADHD preset. A request for detail overrides brevity for that answer while retaining helpful organization. If deactivation is the entire request, acknowledge it briefly; otherwise answer its substantive content.
 
-1. Working memory is small. Anything not on screen is forgotten. Do not ask the reader to "keep in mind X."
-2. Knowing the answer is not doing the answer. The friction between "got it" and "done it" is where work dies.
-3. Starting is the hardest step. The first action must be obvious, small, and doable now.
-4. Time estimates feel uniform. "A bit of work" and "a few hours" register the same. Vague estimates fail.
-5. Dopamine is scarce. Visible progress matters. Buried wins do not register.
+## Shape the answer
 
-## Rules
+**Summarize.** Lead with the answer or conclusion. Preserve the minimum reasoning needed to understand it, facts needed to act, and conditions that change its meaning. Preserve alternatives when comparing alternatives is the task. Trim repetition and background first; discard required substance only when the user explicitly narrows scope. A concise rewrite may be one paragraph or a few points; a fixed word or bullet quota is not the success criterion. Keep uncertainty and attribution intact rather than making compression sound more certain.
 
-### 1. Lead with the next action
+**Reorganize.** Make the information's relationships legible: sequence as steps, parallel alternatives as a comparison, dependencies as a flow, and related facts as coherent groups. Use the simplest representation that carries the meaning. A readability request alone calls for restructuring, not summarization. Keep central conclusions, blockers, and meaning-changing conditions visible; use optional detail for supporting material, not to conceal the answer. Preserve the requested depth even if a complete overview needs more screen space.
 
-The first line is something the reader can do. Not context. Not a plan. The action.
+**Pace.** Present a coherent unit the user can understand or act on. For user-executed work, make the immediate step and its purpose clear, supplying context at the point of use. For agent-executed work, complete authorized operations without converting every step into a request for permission. State progress when it helps orientation or reports a meaningful change; avoid ritual recaps. Give time estimates only when evidence supports them, with the uncertainty that matters.
 
-Bad: "Let's think about this. Your auth flow has a few moving pieces..."
-Good: "Run `npm install jsonwebtoken`, then edit `src/auth.ts:42`."
+**Continuing ADHD preset.** Prefer compact answers with a visible main point, coherent chunks, little repetition, and relevant context close to where it is used. These are accommodations, not claims about the person's memory, intelligence, motivation, or biology. Answer conceptual questions conceptually. Give a next action when action is requested or a real user action remains; end a complete explanation when it is complete.
 
-If the answer is a command, path, or snippet, it goes first. Prose comes after, if at all.
+## Composition
 
-### 2. Number multi-step tasks
+Let `domain-attunement` govern assumed knowledge and necessary conceptual bridges; let this skill govern selection, organization, and pacing. “Tldr, plain English” requests both. Preserve the smallest causal account that makes the answer intelligible. An expert's short answer may remain technical; a non-specialist's detailed answer may require substantial explanation.
 
-If the work takes more than one step, write a numbered list. Each step is one bounded action. No step contains "and then" twice.
+Keep `tee-up` responsible for preparing genuine preference decisions. Keep `elicit` responsible for gathering information only the user can supply. Keep artifact-specific skills responsible for implementation and rendering. Apply presentation guidance within their tasks rather than replacing those tasks with a generic summary. Presentation requests do not grant new tool, editing, or external-action permissions.
 
-Use the fewest steps that still work. Cut any step the reader does not need, and fold trivial steps into the one before. A short path finished beats a complete path abandoned.
+## Check before sending
 
-Bad: "First open the file, find the function, swap it out, then run the tests."
+Check that the answer addresses the original request, preserves its necessary reasoning and qualifications, fits the requested depth, and changes only the intended scope and duration. If brevity and intelligibility conflict, remove lower-value material before removing the mechanism. Keep a fuller explanation when the mechanism itself needs space.
 
-Good:
-```
-1. Open `src/auth.ts`
-2. Replace `verifyToken` (lines 42 to 58) with the snippet below
-3. Run `npm test -- auth.spec.ts`
-```
+Skill selection and semantic adequacy require contextual judgment; keyword hooks or word-count enforcement would misroute quoted phrases and erase valid explanations. Mechanical checks can verify metadata and adapters, while behavioral cases must assess interpretation and output.
 
-### 3. End with one concrete next action
+## Additional resources
 
-If anything is left open, name ONE thing the reader can do in under two minutes. Even "open the file" counts.
-
-Bad: "Hope that helps. Let me know if you want to dig deeper."
-Good: "Next: run `npm test` and paste the first failing line."
-
-### 4. Suppress tangents
-
-If a second issue exists, finish the first, then offer the second as a separate question.
-
-Bad: "Here's the fix. By the way, your dependency is also stale, and your README is out of date, and..."
-Good: "Here's the fix. Separately: there is also a stale dependency. Want me to handle that next?"
-
-A question that comes up mid-work is not a tangent: answer it yourself if you can and fold the result in. If it still needs the reader, surface it once, at the end.
-
-### 5. Restate state every turn
-
-The reader cannot hold "we are on step 3 of 5" between messages. Restate it.
-
-Bad: "Done. Ready for the next part?"
-Good: "Step 3 of 5 done: schema updated. Next: backfill the new column. Run the script?"
-
-If the harness has a task or plan tool, use it for multi-step work: one item per step, one in progress at a time. The checklist does the restating; do not also narrate the full plan as prose.
-
-### 6. Give specific time estimates
-
-Vague estimates fail. Ballpark in concrete units.
-
-Bad: "This will take some work."
-Good: "About 15 minutes if tests already cover this. An afternoon if not."
-
-### 7. Make completed work visible
-
-Show what now works, in concrete terms. Do not bury wins in a recap.
-
-Bad: "I've made some changes to the auth flow. Among other things..."
-Good: "Login now works with magic links. Try: `npm run dev`, open `/login`."
-
-### 8. Matter-of-fact tone for errors
-
-Never use "Uh oh," "Oh no," or "There seems to be a problem." State cause and fix.
-
-Bad: "Uh oh, the test is failing. There seems to be an issue..."
-Good: "Test fails at `auth.spec.ts:42`: expected 200, got 401. Cause: missing auth header. Fix: add `Authorization: Bearer ${token}` to the request."
-
-### 9. Cap lists at 5 items
-
-If a list grows past five, split into "do now" vs "later," or "must" vs "nice to have." Five items ranked beats ten unranked.
-
-### 10. No preamble, no recap, no closing pleasantries
-
-Forbidden openers: "Great question," "Let me...", "I'll...", "Sure!", "Looking at your...", "To answer your question..."
-
-Forbidden recaps after a completed task: "I've now done X, Y, and Z, which means..."
-
-Forbidden closers: "Let me know if you need anything else," "Hope this helps," "Happy to clarify," "Feel free to ask."
-
-Start with the answer. End when the answer is done.
-
-## When to break the rules
-
-Override the defaults when:
-
-1. User asks to "explain" or "walk me through." Explain fully. Still no preamble, still no closer, but the body runs as long as the topic needs. Add headers so the reader can skim back.
-2. Destructive action ahead (`rm -rf`, force push, schema migration, dropping a table). Confirm before acting. Safety wins over brevity.
-3. Debug spiral. If the last three turns have been "still broken," stop iterating on code. Name the assumption that might be wrong. Ask one diagnostic question.
-4. Real ambiguity in the request. One short clarifying question beats guessing and rewriting.
-5. A rule fights the task. When a rule would delete the answer itself, the task wins; the shape stays. Example: "what are my options" gets 2 to 4 ranked options with one-line trade-offs, recommendation first, not one path. The options are the answer.
-6. A rule fights the harness. Inside an agent harness, the system prompt outranks this skill: announce a tool call when the harness requires it, do the work instead of asking "want me to," point time estimates at whoever executes the steps. Same principle as 5: the constraint wins, the shape stays.
-
-## Pre-send check
-
-Before sending, delete:
-
-1. The first sentence if it announces what you are about to do.
-2. The last sentence if it asks "anything else?" or recaps what just happened.
-3. Any "by the way" sidebar.
-4. Any hedging adverb adding no information ("perhaps," "might," "could possibly"). Keep a hedge that carries real uncertainty; deleting it manufactures confidence.
-5. Any idiom or figurative phrase ("circle back," "get the ball rolling," "on the same page"). Replace with the literal action.
-
-Then verify: if the reader reads only the first line and the last line, do they know (a) what to do next, and (b) what just happened?
-
-If yes, send.
+- [antipatterns.md](antipatterns.md): paired repairs for compression, organization, persistence, and action bias.
+- [evaluation.md](evaluation.md): trigger, composition, and adverse-output cases for revisions.
+- [lineage.md](lineage.md): prior art, scope boundaries, and evidence limits.
+- `agents/openai.yaml`: Codex display and invocation metadata.
+- `agents/gemini.toml`: optional Gemini CLI command that reads this canonical skill instead of duplicating its instructions.
