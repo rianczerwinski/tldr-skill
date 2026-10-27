@@ -22,7 +22,7 @@ Why it flips: A conceptual question needs an explanation, not invented work.
 
 ### One correction silently becomes permanent
 ❌ Wrong: After `tldr`, apply an unrequested word ceiling to every later answer.
-✅ Right: Shorten the relevant answer; retain continuing brevity only when the user requests persistence or invokes the established ADHD preset.
+✅ Right: Shorten the relevant answer; retain continuing brevity only when the user requests persistence or uses an established legacy preset alias.
 Why it flips: The duration of a preference is independent of its content.
 
 ### Quoted trigger activates a mode
@@ -36,6 +36,21 @@ Why it flips: Discussion of a command is not its execution.
 Why it flips: The accommodation can help without inventing a claim about the person.
 
 ### Detail request loses to the preset
-❌ Wrong: In ADHD mode, refuse a detailed comparison because it exceeds a word ceiling.
+❌ Wrong: In tldr mode, refuse a detailed comparison because it exceeds a word ceiling.
 ✅ Right: Give the requested comparison with a compact orientation and clearly grouped distinctions.
 Why it flips: The current request controls depth; the preset continues to help navigation.
+
+### Correction replaces the question
+❌ Wrong: Answer “Tldr. What is blocking publication?” with “I'll keep future responses shorter.”
+✅ Right: “GitHub is refusing more repository creation. The remaining repositories are ready locally.”
+Why it flips: A presentation correction changes the answer's form while keeping the question live.
+
+### Every sentence becomes a bullet
+❌ Wrong: Break a three-sentence causal explanation into six fragments under four headings.
+✅ Right: Keep the causal account in a short paragraph; use a list when comparing genuinely parallel items.
+Why it flips: Formatting should reveal relationships rather than require the reader to join fragments.
+
+### Pacing erases the decision context
+❌ Wrong: After “one decision at a time,” ask “Public or private?” without explaining what would be published.
+✅ Right: Give the current class, what publication exposes, any unresolved readiness issue, and the actual tradeoff; retain later classes for later.
+Why it flips: One-at-a-time presentation reduces concurrent demands without making the current decision depend on missing context.

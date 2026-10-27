@@ -1,9 +1,9 @@
 # Optional Gemini CLI command adapter; the shared skill is the editable authority.
 # If installed as a custom command, symlink this file rather than copying its policy.
-description = "Response shaping with the continuing ADHD presentation preset."
+description = "Reduce reading effort while preserving the reasoning that matters."
 
 prompt = """
-Read /Users/rian/.agents/skills/i-have-adhd/SKILL.md and apply it as an explicit invocation. The user's arguments determine any narrower scope or requested operation.
+Read ~/.agents/skills/tldr/SKILL.md and apply it as an explicit invocation. With no arguments, rewrite the preceding answer concisely for this turn. The user's arguments determine any narrower scope or continuing preference.
 
 {{args}}
 """

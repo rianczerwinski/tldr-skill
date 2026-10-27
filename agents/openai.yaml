@@ -1,7 +1,7 @@
 interface:
-  display_name: "Response Shaping · I Have ADHD"
+  display_name: "tldr"
   short_description: "Concise answers, readable structure, deliberate pacing"
-  default_prompt: "Use $i-have-adhd to rewrite the previous answer concisely and clearly, and keep that presentation preference active."
+  default_prompt: "Use $tldr to shorten the previous answer while keeping the reasoning and qualifications that matter."
 
 policy:
   allow_implicit_invocation: true
